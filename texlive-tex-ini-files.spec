@@ -11,6 +11,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
+Requires:	texlive-unicode-data
 
 %description
 This bundle provides a collection of model .ini files for
