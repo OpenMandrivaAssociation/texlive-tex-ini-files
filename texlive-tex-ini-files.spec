@@ -1,6 +1,6 @@
 Name:		texlive-tex-ini-files
-Version:	40533
-Release:	2
+Version:	68920
+Release:	1
 Summary:	Model TeX format creation files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tex-ini-files
@@ -32,6 +32,7 @@ cp -a * %{buildroot}%{_texmfdistdir}
 
 %files
 %{_texmfdistdir}/tex/generic/tex-ini-files
+%{_texmfdistdir}/tex/latex/tex-ini-files
 %doc %{_texmfdistdir}/doc/generic/tex-ini-files
 
 %post -p %{_sbindir}/texlive.post
