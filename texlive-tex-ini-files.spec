@@ -1,6 +1,6 @@
 Name:		texlive-tex-ini-files
 Version:	68920
-Release:	1
+Release:	2
 Summary:	Model TeX format creation files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tex-ini-files
