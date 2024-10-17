@@ -3,7 +3,7 @@ Version:	68920
 Release:	2
 Summary:	Model TeX format creation files
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tex-ini-files
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tex-ini-files
 License:	pd
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ini-files.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ini-files.doc.r%{version}.tar.xz
