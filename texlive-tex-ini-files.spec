@@ -1,42 +1,23 @@
-Name:		texlive-tex-ini-files
-Version:	68920
-Release:	2
+%global tl_name tex-ini-files
+%global tl_revision 78524
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Model TeX format creation files
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/tex-ini-files
+URL:		https://www.ctan.org/tex-archive/macros/generic/tex-ini-files
 License:	pd
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ini-files.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ini-files.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ini-files.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex-ini-files.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
-Requires:	texlive-unicode-data
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This bundle provides a collection of model .ini files for
-creating TeX formats. These files are commonly used to
-introduced distribution-dependent variations in formats. They
-are also used to allow existing format source files to be used
-with newer engines, for example to adapt the plain e-TeX source
-file to work with XeTeX and LuaTeX.
+This bundle provides a collection of model .ini files for creating TeX
+formats. These files are commonly used to introduce distribution-
+dependent variations in formats. They are also used to allow existing
+format source files to be used with newer engines, for example to adapt
+the plain e-TeX source file to work with XeTeX and LuaTeX.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/generic/tex-ini-files
-%{_texmfdistdir}/tex/latex/tex-ini-files
-%doc %{_texmfdistdir}/doc/generic/tex-ini-files
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
